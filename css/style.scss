@@ -609,6 +609,24 @@ footer {
 	border-radius: 25px;
 }
 
+#toTop {
+	position: fixed;
+	right: 25px;
+	bottom: 15px;
+	margin: 0;
+	z-index: 99;
+	display: none;
+
+	button {
+		background-color: rgba(0, 0, 0, 0);
+		width: 55px;
+		height: 55px;
+		border: none;
+		color: #fff;
+		border-radius: 5px
+	}
+}
+
 // responsive
 @media (max-width: 991px) {
 	section.offers .offer {

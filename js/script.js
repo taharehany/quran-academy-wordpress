@@ -37,4 +37,6 @@ jQuery(document).ready(function ($) {
 			}
 		});
 	});
+
+	$(window).scroll(function () { 500 <= $(this).scrollTop() ? $("#toTop").fadeIn(100) : $("#toTop").fadeOut(100) }), $("#toTop").click(function () { $("html, body").animate({ scrollTop: 0 }, 0) })
 });

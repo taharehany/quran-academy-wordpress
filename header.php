@@ -49,7 +49,7 @@
 							<a class="nav-link" href="#packages">الباقات</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="<?php echo get_permalink(108) ?>">المدونة</a>
+							<a class="nav-link" href="<?php echo site_url('/blog'); ?>">المدونة</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#contact">تواصل معنا</a>

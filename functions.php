@@ -66,10 +66,10 @@ function handle_custom_form_submission()
         $email = sanitize_email($_POST['email']);
         $message = sanitize_textarea_field($_POST['message']);
 
-        $to = 'ryhanytaha@gmail.com';
+        $to = 'contact@arabicquran.academy';
         $subject = 'أكاديمية قرأن عربي';
         $headers = array('Content-Type: text/html; charset=UTF-8');
-        $message = "Name: $name<br>Email: $email<br>الرسالة: $message";
+        $message = "الاسم: $name<br>البريد الإلكتروني: $email<br>الرسالة: $message";
 
         wp_mail($to, $subject, $message, $headers);
 

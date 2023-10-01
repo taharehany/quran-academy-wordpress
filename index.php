@@ -15,16 +15,16 @@ if ($hero_slide_query->have_posts()) :
 		$title = get_the_title();
 		$description = get_field('description_slider');
 ?>
-<section class="hero" style="background-image: url('<?php echo esc_html($thumbnail_url); ?>');">
-	<div class="container">
-		<div class="text">
+		<section class="hero" style="background-image: url('<?php echo esc_html($thumbnail_url); ?>');">
+			<div class="container">
+				<div class="text">
 
-			<h1><?php echo esc_html($title); ?></h1>
-			<p><?php echo esc_html($description); ?></p>
-			<a class="btn learn-btn" href="#packages">تعلم القرآن الكريم الآن</a>
-		</div>
-	</div>
-</section>
+					<h1><?php echo esc_html($title); ?></h1>
+					<p><?php echo esc_html($description); ?></p>
+					<a class="btn learn-btn" href="#packages">تعلم القرآن الكريم الآن</a>
+				</div>
+			</div>
+		</section>
 <?php
 
 	endwhile;
@@ -47,14 +47,14 @@ endif;
 
 			if ($offers_query->have_posts()) :
 				while ($offers_query->have_posts()) : $offers_query->the_post(); ?>
-			<div class="col-md-6 col-lg-3">
-				<div class="offer">
-					<div>
-						<?php the_post_thumbnail(); ?>
-						<p><?php the_title(); ?></p>
+					<div class="col-md-6 col-lg-3">
+						<div class="offer">
+							<div>
+								<?php the_post_thumbnail(); ?>
+								<p><?php the_title(); ?></p>
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
 			<?php
 				endwhile;
 				wp_reset_postdata();
@@ -80,25 +80,22 @@ endif;
 			if ($about_query->have_posts()) :
 				while ($about_query->have_posts()) : $about_query->the_post();
 			?>
-			<div class="col-md-6">
-				<div class="about-text">
-					<h2><?php the_title(); ?></h2>
-					<?php the_content(); ?>
-				</div>
-			</div>
+					<div class="col-md-6">
+						<div class="about-text">
+							<h2><?php the_title(); ?></h2>
+							<?php the_content(); ?>
+						</div>
+					</div>
 
-			<div class="col-md-6">
-				<div class="about-video">
-					<?php
+					<div class="col-md-6">
+						<div class="about-video">
+							<?php
 							$video_link = get_field('video_link')
 							?>
 
-					<iframe width="100%" height="315" src="<?php echo esc_html($video_link); ?>" title="YouTube video player"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						allowfullscreen></iframe>
-				</div>
-			</div>
+							<iframe width="100%" height="315" src="<?php echo esc_html($video_link); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						</div>
+					</div>
 			<?php
 				endwhile;
 				wp_reset_postdata();
@@ -123,26 +120,26 @@ endif;
 
 			if ($counter_query->have_posts()) :
 				while ($counter_query->have_posts()) : $counter_query->the_post(); ?>
-			<div class="col-lg-3 col-md-6">
-				<div class="counter-box">
-					<?php
+					<div class="col-lg-3 col-md-6">
+						<div class="counter-box">
+							<?php
 							// Retrieve the featured image
 							if (has_post_thumbnail()) {
 								the_post_thumbnail();
 							}
 							?>
-					<div>
-						<?php
+							<div>
+								<?php
 								// Retrieve the counter number custom field
 								$counter_number = get_post_meta(get_the_ID(), 'counter_number', true);
 								if (!empty($counter_number)) {
 									echo '<span>' . esc_html($counter_number) . '</span>';
 								}
 								?>
-						<p><?php the_title(); ?></p>
+								<p><?php the_title(); ?></p>
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
 			<?php
 				endwhile;
 				wp_reset_postdata();
@@ -173,16 +170,16 @@ endif;
 			if ($service_query->have_posts()) :
 				while ($service_query->have_posts()) : $service_query->the_post();
 			?>
-			<div class="col-md-6 col-lg-4 col-12">
-				<div class="service">
-					<?php
+					<div class="col-md-6 col-lg-4 col-12">
+						<div class="service">
+							<?php
 							if (has_post_thumbnail()) {
 								the_post_thumbnail('full', array('class' => 'img-fluid'));
 							}
 							?>
-					<h3><?php the_title(); ?></h3>
-				</div>
-			</div>
+							<h3><?php the_title(); ?></h3>
+						</div>
+					</div>
 			<?php
 				endwhile;
 				wp_reset_postdata();
@@ -215,11 +212,11 @@ endif;
 
 					$description = get_field('description_testimonials')
 			?>
-			<div class="item">
-				<h3 class="name"><?php the_title(); ?></h3>
+					<div class="item">
+						<h3 class="name"><?php the_title(); ?></h3>
 
-				<?php echo esc_html($description); ?>
-			</div>
+						<?php echo esc_html($description); ?>
+					</div>
 			<?php
 				endwhile;
 				wp_reset_postdata();
@@ -249,12 +246,12 @@ endif;
 			if ($package_query->have_posts()) :
 				while ($package_query->have_posts()) : $package_query->the_post();
 			?>
-			<div class="col-md-6 col-lg-4 col-12">
-				<div class="package">
-					<div class="top">
-						<h3 class="title"><?php the_title(); ?></h3>
+					<div class="col-md-6 col-lg-4 col-12">
+						<div class="package">
+							<div class="top">
+								<h3 class="title"><?php the_title(); ?></h3>
 
-						<?php
+								<?php
 								$price = get_field('package_price');
 								$adv_1 = get_field('adv_1');
 								$adv_2 = get_field('adv_2');
@@ -262,25 +259,25 @@ endif;
 								$adv_4 = get_field('adv_4');
 								?>
 
-						<p class="price"><?php echo esc_html($price); ?>
-							<img src="<?php echo esc_url(get_template_directory_uri() . '/images/icons/rs.svg'); ?>" alt="">
-						</p>
+								<p class="price"><?php echo esc_html($price); ?>
+									<img src="<?php echo esc_url(get_template_directory_uri() . '/images/icons/rs.svg'); ?>" alt="">
+								</p>
 
-						<p class="text-center">شهريـــا</p>
+								<p class="text-center">شهريـــا</p>
 
-						<ul>
-							<li><?php echo esc_html($adv_1); ?></li>
-							<li><?php echo esc_html($adv_2); ?></li>
-							<li><?php echo esc_html($adv_3); ?></li>
-							<li><?php echo esc_html($adv_4); ?></li>
-						</ul>
+								<ul>
+									<li><?php echo esc_html($adv_1); ?></li>
+									<li><?php echo esc_html($adv_2); ?></li>
+									<li><?php echo esc_html($adv_3); ?></li>
+									<li><?php echo esc_html($adv_4); ?></li>
+								</ul>
+							</div>
+
+							<div class="text-center bottom">
+								<a class="btn subscribe-btn" href="https://wa.me/966530132592">اشترك الأن</a>
+							</div>
+						</div>
 					</div>
-
-					<div class="text-center bottom">
-						<a class="btn subscribe-btn" href="https://wa.me/966530132592">اشترك الأن</a>
-					</div>
-				</div>
-			</div>
 			<?php
 				endwhile;
 				wp_reset_postdata();
@@ -311,25 +308,25 @@ endif;
 				while ($blogs->have_posts()) : $blogs->the_post();
 					$thumbnail_url = get_the_post_thumbnail_url();
 			?>
-			<div class="col-md-6 col-lg-4 col-12">
-				<div class="single-blog">
-					<a href="<?php the_permalink() ?>">
-						<img src="<?php echo esc_html($thumbnail_url); ?>" class="img-fluid" alt="">
-					</a>
+					<div class="col-md-6 col-lg-4 col-12">
+						<div class="single-blog">
+							<a href="<?php the_permalink() ?>">
+								<img src="<?php echo esc_html($thumbnail_url); ?>" class="img-fluid" alt="">
+							</a>
 
-					<div class="text">
-						<a href="<?php the_permalink() ?>">
-							<h3>
-								<?php the_title(); ?>
-							</h3>
-						</a>
+							<div class="text">
+								<a href="<?php the_permalink() ?>">
+									<h3>
+										<?php the_title(); ?>
+									</h3>
+								</a>
 
-						<div class="desc">
-							<?php the_excerpt(); ?>
+								<div class="desc">
+									<?php the_excerpt(); ?>
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
-			</div>
 			<?php
 				endwhile;
 				wp_reset_postdata();
@@ -346,7 +343,6 @@ endif;
 	</div>
 </section>
 <!-- Blogs -->
-
 
 <!-- Contact -->
 <section class="contact" id="contact">
@@ -391,7 +387,7 @@ endif;
 					<div class="email">
 						<img src="images/icons/email.svg" alt="">
 						<p>
-							<a href="mailto: info@arabicquranacademy.com">info@arabicquranacademy.com</a>
+							<a href="mailto: contact@arabicquran.academy">contact@arabicquran.academy</a>
 						</p>
 					</div>
 
