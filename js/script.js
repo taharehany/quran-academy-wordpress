@@ -5,6 +5,9 @@ jQuery(document).ready(function ($) {
 		margin: 10,
 		nav: true,
 		dots: false,
+		autoplay: true,
+		autoplayTimeout: 5000,
+		autoplayHoverPause: true,
 		navContainer: '.nav-container',
 		responsive: {
 			0: {
