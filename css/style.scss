@@ -1,10 +1,12 @@
-$main_color: #39957A;
+$main_color: #39957a;
 $dark_color: #212833;
-$second_color: #F9BC61;
+$second_color: #f9bc61;
 $padding: 5rem 0;
 
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
 body {
-	font-family: 'Noto Kufi Arabic', sans-serif !important;
+	font-family: "Noto Kufi Arabic", sans-serif !important;
 }
 
 .main-title {
@@ -20,7 +22,7 @@ body {
 
 		&::before,
 		&::after {
-			content: url('../images/icons/title.svg');
+			content: url("../images/icons/title.svg");
 			margin: 0 10px;
 			height: 30px;
 		}
@@ -31,7 +33,6 @@ nav {
 	&.navbar {
 		background-color: $main_color;
 		color: #fff;
-
 
 		.nav-link {
 			color: #fff;
@@ -49,7 +50,7 @@ nav {
 
 			&::after {
 				margin-top: 5px;
-				content: '';
+				content: "";
 				display: block;
 				width: 0;
 				height: 2px;
@@ -92,7 +93,7 @@ nav {
 
 // hero
 section.hero {
-	background: url('../images/hero.jpg') no-repeat center center;
+	background: url("../images/hero.jpg") no-repeat center center;
 	height: 88vh;
 	background-size: cover;
 	display: flex;
@@ -101,7 +102,7 @@ section.hero {
 	z-index: 0;
 
 	&::after {
-		content: '';
+		content: "";
 		position: absolute;
 		left: 0;
 		right: 0;
@@ -149,7 +150,7 @@ section.hero {
 section.offers {
 	margin-top: -145px;
 	padding: $padding;
-	background-image: url('../images/bgs/01.png');
+	background-image: url("../images/bgs/01.png");
 	background-repeat: no-repeat;
 	position: relative;
 	z-index: 1;
@@ -164,6 +165,14 @@ section.offers {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		transition: all 0.3s ease-in-out;
+
+		&:hover {
+			box-shadow: none;
+			p {
+				color: $main_color;
+			}
+		}
 
 		img {
 			width: 100px;
@@ -172,6 +181,7 @@ section.offers {
 		}
 
 		p {
+			transition: all 0.3s ease-in-out;
 			margin-bottom: 0;
 		}
 	}
@@ -182,7 +192,7 @@ section.offers {
 // about
 section.about {
 	padding: $padding;
-	background-image: url('../images/bgs/01.png');
+	background-image: url("../images/bgs/01.png");
 	background-repeat: no-repeat;
 
 	.about-text {
@@ -280,14 +290,19 @@ section.services {
 // testimonials
 section.testimonials {
 	padding: $padding;
-	background-color: #EAEAEA;
-	background-image: url('../images/bgs/01.png');
+	background-color: #eaeaea;
+	background-image: url("../images/bgs/01.png");
 	background-repeat: no-repeat;
 
 	.item {
 		background-color: #fff;
 		border-radius: 15px;
 		padding: 20px;
+
+		.desc {
+			padding-inline-start: 15px;
+			margin-bottom: 10px;
+		}
 
 		.name {
 			font-size: 18px;
@@ -297,7 +312,7 @@ section.testimonials {
 			align-items: center;
 
 			&::before {
-				content: '';
+				content: "";
 				margin-inline-end: 10px;
 				width: 35px;
 				height: 35px;
@@ -311,6 +326,10 @@ section.testimonials {
 			font-size: 14px;
 			margin-bottom: 0;
 		}
+
+		.stars {
+			color: #fbd24f;
+		}
 	}
 
 	.nav-container {
@@ -322,7 +341,7 @@ section.testimonials {
 
 	.owl-prev,
 	.owl-next {
-		background-color: #EFF1F5;
+		background-color: #eff1f5;
 		border-radius: 50%;
 		width: 40px;
 		height: 40px;
@@ -343,10 +362,16 @@ section.testimonials {
 // packages
 section.packages {
 	padding: $padding;
-	background-color: #F7F7F7;
+	background-color: #f7f7f7;
 
 	.package {
 		margin: 2rem;
+
+		&:hover {
+			.price {
+				text-shadow: none;
+			}
+		}
 
 		.top {
 			border: 1px solid $dark_color;
@@ -370,9 +395,11 @@ section.packages {
 			display: flex;
 			align-items: flex-end;
 			justify-content: center;
-			line-height: .8;
+			line-height: 0.8;
 			color: $main_color;
 			padding: 20px 0 0;
+			text-shadow: -3px 3px 2px #202833;
+			transition: all 0.3s ease-in-out;
 
 			img {
 				width: 40px;
@@ -386,12 +413,24 @@ section.packages {
 			margin-bottom: 0;
 
 			li {
-				background-color: #EAEAEA;
+				background-color: #eaeaea;
 				margin-bottom: 4px;
 				padding: 5px 20px;
+				display: flex;
+				align-items: center;
 
 				&:last-of-type {
 					margin-bottom: 0;
+				}
+
+				&::before {
+					content: "";
+					background-image: url("../images/icons/title.svg");
+					margin-inline-end: 10px;
+					background-size: 15px 15px;
+					display: inline-block;
+					width: 15px;
+					height: 15px;
 				}
 			}
 		}
@@ -402,7 +441,7 @@ section.packages {
 			border-radius: 0 0 25px 25px;
 			padding-bottom: 25px;
 			padding-top: 25px;
-			background-image: url('../images/bgs/01.png');
+			background-image: url("../images/bgs/01.png");
 			background-repeat: no-repeat;
 		}
 
@@ -509,12 +548,12 @@ section.single-post {
 // contact
 section.contact {
 	padding: $padding;
-	background: url('../images/hero.jpg') no-repeat center center;
+	background: url("../images/hero.jpg") no-repeat center center;
 	position: relative;
 	z-index: 1;
 
 	&::after {
-		content: '';
+		content: "";
 		position: absolute;
 		left: 0;
 		right: 0;
@@ -522,6 +561,15 @@ section.contact {
 		bottom: 0;
 		background-color: rgba(0, 0, 0, 0.5);
 		z-index: -1;
+	}
+
+	.main-title {
+		h2 {
+			&::before,
+			&::after {
+				display: none;
+			}
+		}
 	}
 
 	.main-title {
@@ -623,7 +671,7 @@ footer {
 		height: 55px;
 		border: none;
 		color: #fff;
-		border-radius: 5px
+		border-radius: 5px;
 	}
 }
 
@@ -637,10 +685,10 @@ footer {
 		margin-bottom: 25px;
 	}
 
-	section.packages .package {
-		margin: 0;
-		margin-bottom: 25px;
-	}
+	// section.packages .package {
+	// 	margin: 0;
+	// 	margin-bottom: 25px;
+	// }
 
 	section.blogs .single-blog {
 		margin-bottom: 25px;
