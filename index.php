@@ -387,15 +387,15 @@ if ($contact_section_query->have_posts()) :
 
 						<div class="row">
 							<div class="col-12 mb-3">
-								<input type="text" class="form-control" name="name" placeholder="الاسم">
+								<input type="text" class="form-control" name="name" placeholder="الاسم" required>
 							</div>
 
 							<div class="col-12 mb-3">
-								<input type="email" class="form-control" name="phone" placeholder="رقم الهاتف">
+								<input type="email" class="form-control" name="phone" placeholder="رقم الهاتف" required>
 							</div>
 
 							<div class="col-12 mb-3">
-								<textarea class="form-control" name="message" placeholder="الرسالة" rows="6"></textarea>
+								<textarea class="form-control" name="message" placeholder="الرسالة" rows="6" required></textarea>
 							</div>
 
 							<div class="col-12">
