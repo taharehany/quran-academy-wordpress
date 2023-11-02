@@ -391,7 +391,7 @@ if ($contact_section_query->have_posts()) :
 							</div>
 
 							<div class="col-12 mb-3">
-								<input type="email" class="form-control" name="phone" placeholder="رقم الهاتف" required>
+								<input type="number" class="form-control" name="phone" placeholder="رقم الهاتف" required>
 							</div>
 
 							<div class="col-12 mb-3">
