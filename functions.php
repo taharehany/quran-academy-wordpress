@@ -63,7 +63,7 @@ function handle_custom_form_submission()
 {
     if (defined('DOING_AJAX') && DOING_AJAX) {
         $name = sanitize_text_field($_POST['name']);
-        $phone = sanitize_email($_POST['phone']);
+        $phone = sanitize_text_field($_POST['phone']); // Change 'email' to 'phone'
         $message = sanitize_textarea_field($_POST['message']);
 
         $to = 'contact@arabicquran.academy';
