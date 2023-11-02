@@ -63,13 +63,13 @@ function handle_custom_form_submission()
 {
     if (defined('DOING_AJAX') && DOING_AJAX) {
         $name = sanitize_text_field($_POST['name']);
-        $email = sanitize_email($_POST['email']);
+        $phone = sanitize_email($_POST['phone']);
         $message = sanitize_textarea_field($_POST['message']);
 
         $to = 'contact@arabicquran.academy';
         $subject = 'أكاديمية قرأن عربي';
         $headers = array('Content-Type: text/html; charset=UTF-8');
-        $message = "الاسم: $name<br>البريد الإلكتروني: $email<br>الرسالة: $message";
+        $message = "الاسم: $name<br>رقم الموبايل: $phone<br>الرسالة: $message";
 
         wp_mail($to, $subject, $message, $headers);
 
