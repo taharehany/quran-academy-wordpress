@@ -51,7 +51,7 @@ endif;
 			<div class="col-md-6 col-lg-3">
 				<div class="offer">
 					<div>
-						<a href="https://wa.me/966530132592">
+						<a href="https://wa.me/966530132592" class="text-decoration-none" style="color: #000;">
 							<?php the_post_thumbnail(); ?>
 							<p><?php the_title(); ?></p>
 						</a>
@@ -179,7 +179,7 @@ endif;
 				while ($service_query->have_posts()) : $service_query->the_post();
 			?>
 			<div class="col-md-6 col-lg-4 col-12">
-				<a href="https://wa.me/966530132592">
+				<a href="https://wa.me/966530132592" class="text-decoration-none" style="color: #000;">
 					<div class="service">
 						<?php
 								if (has_post_thumbnail()) {
@@ -399,7 +399,8 @@ if ($contact_section_query->have_posts()) :
 							</div>
 
 							<div class="col-12 mb-3">
-								<textarea class="form-control" name="message" placeholder="الرسالة" rows="6" required></textarea>
+								<textarea class="form-control" name="message" placeholder="الرسالة" rows="6"
+									required></textarea>
 							</div>
 
 							<div class="col-12">

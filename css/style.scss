@@ -168,8 +168,8 @@ section.offers {
 		transition: all 0.3s ease-in-out;
 
 		a {
-			color: #000 !important;
-			text-decoration: none !important;
+			color: #000;
+			text-decoration: none;
 		}
 
 		&:hover {
@@ -259,8 +259,8 @@ section.services {
 	padding: $padding;
 
 	a {
-		color: #000 !important;
-		text-decoration: none !important;
+		color: #000;
+		text-decoration: none;
 	}
 
 	.service {
