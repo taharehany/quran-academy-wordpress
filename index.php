@@ -50,12 +50,12 @@ endif;
 				while ($offers_query->have_posts()) : $offers_query->the_post(); ?>
 			<div class="col-md-6 col-lg-3">
 				<div class="offer">
-					<div>
-						<a href="https://wa.me/966530132592" class="text-decoration-none" style="color: #000;">
+					<a href="https://wa.me/966530132592" class="text-decoration-none" style="color: #000;">
+						<div>
 							<?php the_post_thumbnail(); ?>
 							<p><?php the_title(); ?></p>
-						</a>
-					</div>
+						</div>
+					</a>
 				</div>
 			</div>
 			<?php
