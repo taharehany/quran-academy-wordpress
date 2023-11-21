@@ -167,6 +167,11 @@ section.offers {
 		justify-content: center;
 		transition: all 0.3s ease-in-out;
 
+		a {
+			color: #000;
+			text-decoration: none;
+		}
+
 		&:hover {
 			box-shadow: none;
 			p {
@@ -252,6 +257,11 @@ section.counter {
 // services
 section.services {
 	padding: $padding;
+
+	a {
+		color: #000;
+		text-decoration: none;
+	}
 
 	.service {
 		border-radius: 20px;

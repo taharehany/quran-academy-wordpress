@@ -136,6 +136,10 @@ section.offers .offer {
   justify-content: center;
   transition: all 0.3s ease-in-out;
 }
+section.offers .offer a {
+  color: #000;
+  text-decoration: none;
+}
 section.offers .offer:hover {
   box-shadow: none;
 }
@@ -198,6 +202,10 @@ section.counter .counter-box p {
 
 section.services {
   padding: 5rem 0;
+}
+section.services a {
+  color: #000;
+  text-decoration: none;
 }
 section.services .service {
   border-radius: 20px;
