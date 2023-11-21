@@ -51,8 +51,10 @@ endif;
 			<div class="col-md-6 col-lg-3">
 				<div class="offer">
 					<div>
-						<?php the_post_thumbnail(); ?>
-						<p><?php the_title(); ?></p>
+						<a href="https://wa.me/966530132592">
+							<?php the_post_thumbnail(); ?>
+							<p><?php the_title(); ?></p>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -125,7 +127,7 @@ endif;
 
 			if ($counter_query->have_posts()) :
 				while ($counter_query->have_posts()) : $counter_query->the_post(); ?>
-			<div class="col-lg-3 col-md-6">
+			<div class="col-lg-3 col-6">
 				<div class="counter-box">
 					<?php
 							// Retrieve the featured image
@@ -177,14 +179,16 @@ endif;
 				while ($service_query->have_posts()) : $service_query->the_post();
 			?>
 			<div class="col-md-6 col-lg-4 col-12">
-				<div class="service">
-					<?php
-							if (has_post_thumbnail()) {
-								the_post_thumbnail('full', array('class' => 'img-fluid'));
-							}
-							?>
-					<h3><?php the_title(); ?></h3>
-				</div>
+				<a href="https://wa.me/966530132592">
+					<div class="service">
+						<?php
+								if (has_post_thumbnail()) {
+									the_post_thumbnail('full', array('class' => 'img-fluid'));
+								}
+								?>
+						<h3><?php the_title(); ?></h3>
+					</div>
+				</a>
 			</div>
 			<?php
 				endwhile;
