@@ -137,8 +137,8 @@ section.offers .offer {
   transition: all 0.3s ease-in-out;
 }
 section.offers .offer a {
-  color: #000;
-  text-decoration: none;
+  color: #000 !important;
+  text-decoration: none !important;
 }
 section.offers .offer:hover {
   box-shadow: none;
@@ -204,8 +204,8 @@ section.services {
   padding: 5rem 0;
 }
 section.services a {
-  color: #000;
-  text-decoration: none;
+  color: #000 !important;
+  text-decoration: none !important;
 }
 section.services .service {
   border-radius: 20px;
