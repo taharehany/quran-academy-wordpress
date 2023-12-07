@@ -48,7 +48,7 @@ endif;
 
 			if ($offers_query->have_posts()) :
 				while ($offers_query->have_posts()) : $offers_query->the_post(); ?>
-			<div class="col-md-6 col-lg-3">
+			<div class="col-lg-3 col-6">
 				<div class="offer">
 					<a href="https://wa.me/966530132592" class="text-decoration-none" style="color: #000;">
 						<div>
