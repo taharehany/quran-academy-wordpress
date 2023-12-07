@@ -148,7 +148,7 @@ section.offers .offer:hover p {
 }
 section.offers .offer img {
   width: 100px;
-  height: 100px;
+  height: 80px;
   margin-bottom: 20px;
 }
 section.offers .offer p {
@@ -559,7 +559,7 @@ footer p {
 
 @media (max-width: 991px) {
   section.offers .offer {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
   section.counter .counter-box {
     margin-bottom: 25px;
