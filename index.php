@@ -418,14 +418,14 @@ if ($contact_section_query->have_posts()) :
 			<div class="col-md-6">
 				<div class="info">
 					<div class="email">
-						<img src="images/icons/email.svg" alt="">
+						<img src="<?php echo esc_url(get_template_directory_uri() . '/images/icons/email.svg'); ?>" alt="">
 						<p>
 							<a href="mailto: contact@arabicquran.academy">contact@arabicquran.academy</a>
 						</p>
 					</div>
 
 					<div class="whatsapp">
-						<img src="images/icons/email.svg" alt="">
+						<img src="<?php echo esc_url(get_template_directory_uri() . '/images/icons/whatsapp.svg'); ?>" alt="">
 						<p>
 							<a href="https://wa.me/966576593554">⁦⁦+966 57 659 3554⁩</a>
 						</p>
