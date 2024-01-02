@@ -50,7 +50,7 @@ endif;
 				while ($offers_query->have_posts()) : $offers_query->the_post(); ?>
 			<div class="col-lg-3 col-6">
 				<div class="offer">
-					<a href="https://wa.me/966530132592" class="text-decoration-none" style="color: #000;">
+					<a href="https://wa.me/966576593554" class="text-decoration-none" style="color: #000;">⁦⁩
 						<div>
 							<?php the_post_thumbnail(); ?>
 							<p><?php the_title(); ?></p>
@@ -179,7 +179,7 @@ endif;
 				while ($service_query->have_posts()) : $service_query->the_post();
 			?>
 			<div class="col-md-6 col-lg-4 col-12">
-				<a href="https://wa.me/966530132592" class="text-decoration-none" style="color: #000;">
+				<a href="https://wa.me/966576593554" class="text-decoration-none" style="color: #000;">
 					<div class="service">
 						<?php
 								if (has_post_thumbnail()) {
@@ -296,7 +296,7 @@ endif;
 					</div>
 
 					<div class="text-center bottom">
-						<a class="btn subscribe-btn" href="https://wa.me/966530132592">اشترك الأن</a>
+						<a class="btn subscribe-btn" href="https://wa.me/966576593554">اشترك الأن</a>
 					</div>
 				</div>
 			</div>
@@ -427,7 +427,7 @@ if ($contact_section_query->have_posts()) :
 					<div class="whatsapp">
 						<img src="images/icons/email.svg" alt="">
 						<p>
-							<a href="https://wa.me/966530132592">⁦+966 53 013 2592</a>
+							<a href="https://wa.me/966576593554">⁦⁦+966 57 659 3554⁩</a>
 						</p>
 					</div>
 				</div>
