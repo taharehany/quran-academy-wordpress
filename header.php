@@ -10,7 +10,8 @@
 	<link rel="shortcut icon" href="<?php echo esc_url(get_template_directory_uri() . '/images/favicon.png'); ?>">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700;800&display=swap"
+		rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
 	<?php wp_head(); ?>
@@ -27,7 +28,9 @@
 					<?php the_custom_logo(); ?>
 				</div>
 
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
@@ -47,9 +50,12 @@
 						<li class="nav-item">
 							<a class="nav-link" href="#packages">الباقات</a>
 						</li>
-<!-- 						<li class="nav-item">
+						<!-- 						<li class="nav-item">
 							<a class="nav-link" href="<?php echo site_url('/blog'); ?>">المدونة</a>
 						</li> -->
+						<li class="nav-item">
+							<a class="nav-link" href="<?php echo site_url('/courses'); ?>">دورات وحلقات تعليمية</a>
+						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#contact">تواصل معنا</a>
 						</li>

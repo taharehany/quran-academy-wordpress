@@ -128,7 +128,7 @@ section.offers .offer {
   border-radius: 20px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
   text-align: center;
-  padding: 18px;
+  padding: 20px;
   background-color: #fff;
   height: 180px;
   display: flex;
@@ -437,6 +437,61 @@ section.blogs .blogs-btn:hover {
   color: #f9bc61;
 }
 
+section.courses {
+  padding: 5rem 0;
+}
+section.courses .single {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+section.courses .single img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section.courses .single h3 {
+  color: #39957a;
+  font-size: 20px;
+  max-height: 3em;
+  overflow: hidden;
+  line-height: 1.2em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+section.courses .desc {
+  margin-top: 2rem;
+  background-image: url("../images/bgs/01.png");
+  background-repeat: no-repeat;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+section.courses .price {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 700;
+}
+section.courses .courses-btn {
+  background-color: #39957a;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 3px 2px 1px rgba(0, 0, 0, 0.3);
+  margin-top: 25px;
+}
+section.courses .courses-btn:hover {
+  background-color: #000;
+  color: #f9bc61;
+}
+
 section.single-post {
   padding: 5rem 0;
 }
@@ -559,7 +614,7 @@ footer p {
 
 @media (max-width: 991px) {
   section.offers .offer {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
   section.counter .counter-box {
     margin-bottom: 25px;
