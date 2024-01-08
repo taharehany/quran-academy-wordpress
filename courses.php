@@ -33,7 +33,7 @@
 				<?php the_content(); ?>
 			</div>
 
-			<div class="price"><?php $price ?></div>
+			<div class="price"><?php echo $price; ?></div>
 
 			<?php
 				endwhile;

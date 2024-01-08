@@ -473,11 +473,6 @@ section.courses .desc {
   -o-border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.04);
 }
-section.courses .price {
-  font-size: 3rem;
-  text-align: center;
-  font-weight: 700;
-}
 section.courses .courses-btn {
   background-color: #39957a;
   color: #fff;
