@@ -33,7 +33,7 @@
 				<?php the_content(); ?>
 			</div>
 
-			<p class="price"><?php echo esc_html($price); ?> ريال</p>
+			<div class="price"><?php $price ?></div>
 
 			<?php
 				endwhile;
