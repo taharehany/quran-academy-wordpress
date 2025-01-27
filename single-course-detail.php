@@ -102,8 +102,9 @@ section.testimonials.subjects {
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<div class="desc">
-				</div>
+				<div>
+   			        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/waratel.jpeg'); ?>" class="img-fluid" style="width: 325px;" alt="<?php echo esc_attr(get_the_title()); ?>">
+                </div>
 			</div>
 
 			<div class="col-md-6">
