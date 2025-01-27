@@ -79,7 +79,7 @@
 							<a class="nav-link" href="<?php echo site_url('/courses'); ?>">دورات وحلقات تعليمية</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href=""<?php echo home_url('/') . '#contact'; ?>"">تواصل معنا</a>
+							<a class="nav-link" href="<?php echo home_url('/') . '#contact'; ?>">تواصل معنا</a>
 						</li>
 					</ul>
 
