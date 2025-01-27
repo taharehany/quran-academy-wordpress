@@ -2,39 +2,45 @@
 
 <?php get_header(); ?>
 
-<!-- courses -->
-<section class="courses">
+<!-- Blogs -->
+<section class="blogs">
 	<div class="container">
-		<div>
+		<div class="main-title">
+			<h2><?php the_title(); ?></h2>
+		</div>
+
+		<div class="row">
 			<?php
 			$args = array(
-				'post_type' => 'courses',
-				'posts_per_page' => 1,
+				'post_type' => 'new_courses',
+				'posts_per_page' => 6,
 			);
 
-			$blogs = new wp_query($args);
+			$courses = new wp_query($args);
 
-			if ($blogs->have_posts()) :
-				while ($blogs->have_posts()) : $blogs->the_post();
+			if ($courses->have_posts()) :
+				while ($courses->have_posts()) : $courses->the_post();
 					$thumbnail_url = get_the_post_thumbnail_url();
-					$title = get_the_title();
-					$price = get_field('price')
 			?>
+			<div class="col-md-6 col-lg-4 col-12">
+				<div class="single-blog">
+					<a href="<?php the_permalink() ?>">
+						<img src="<?php echo esc_html($thumbnail_url); ?>" class="img-fluid" alt="">
+					</a>
 
-			<div class="main-title">
-				<h1><?php echo esc_html($title); ?></h1>
+					<div class="text">
+						<a href="<?php the_permalink() ?>">
+							<h3>
+								<?php the_title(); ?>
+							</h3>
+						</a>
+
+						<div class="desc">
+							<?php the_excerpt(); ?>
+						</div>
+					</div>
+				</div>
 			</div>
-
-			<div class="single">
-				<img src="<?php echo esc_html($thumbnail_url); ?>" class="img-fluid" alt="">
-			</div>
-
-			<div class="desc">
-				<?php the_content(); ?>
-			</div>
-
-			<div class="price"><?php echo $price; ?></div>
-
 			<?php
 				endwhile;
 				wp_reset_postdata();
@@ -46,6 +52,7 @@
 		</div>
 	</div>
 </section>
-<!-- courses -->
+<!-- Blogs -->
 
 <?php get_footer(); ?>
+
