@@ -12,7 +12,7 @@
 		<div class="row">
 			<?php
 			$args = array(
-				'post_type' => 'new_courses',
+				'post_type' => 'courses',
 				'posts_per_page' => 6,
 			);
 
