@@ -63,14 +63,14 @@
 						</li>
 
 						<li class="nav-item">
-							<a class="nav-link" href="#about">من نحن</a>
+							<a class="nav-link" href="<?php echo home_url('/') . '#about'; ?>">من نحن</a>
 						</li>
 
 						<li class="nav-item">
-							<a class="nav-link" href="#services">الدورات</a>
+							<a class="nav-link" href="<?php echo home_url('/') . '#services'; ?>">الدورات</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#packages">الباقات</a>
+							<a class="nav-link" href="<?php echo home_url('/') . '#packages'; ?>">الباقات</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="<?php echo site_url('/blogs'); ?>">المدونة</a>
@@ -79,7 +79,7 @@
 							<a class="nav-link" href="<?php echo site_url('/courses'); ?>">دورات وحلقات تعليمية</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#contact">تواصل معنا</a>
+							<a class="nav-link" href=""<?php echo home_url('/') . '#contact'; ?>"">تواصل معنا</a>
 						</li>
 					</ul>
 
