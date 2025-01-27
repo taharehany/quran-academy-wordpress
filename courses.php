@@ -16,20 +16,21 @@
 				'posts_per_page' => 6,
 			);
 
-			$courses = new wp_query($args);
+			$courses = new WP_Query($args);
 
 			if ($courses->have_posts()) :
 				while ($courses->have_posts()) : $courses->the_post();
 					$thumbnail_url = get_the_post_thumbnail_url();
+					$course_permalink = site_url('/course-detail/' . $post->post_name);
 			?>
 			<div class="col-md-6 col-lg-4 col-12">
 				<div class="single-blog">
-					<a href="<?php the_permalink() ?>">
+					<a href="<?php echo esc_url($course_permalink); ?>">
 						<img src="<?php echo esc_html($thumbnail_url); ?>" class="img-fluid" alt="">
 					</a>
 
 					<div class="text">
-						<a href="<?php the_permalink() ?>">
+						<a href="<?php echo esc_url($course_permalink); ?>">
 							<h3>
 								<?php the_title(); ?>
 							</h3>
@@ -55,4 +56,3 @@
 <!-- Blogs -->
 
 <?php get_footer(); ?>
-
