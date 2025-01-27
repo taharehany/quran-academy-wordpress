@@ -389,6 +389,7 @@ section.blogs {
 }
 section.blogs .single-blog {
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 25px;
 }
 section.blogs .single-blog img {
   width: 100%;
