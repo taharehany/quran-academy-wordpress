@@ -11,12 +11,16 @@
 
 		<div class="row">
 			<?php
+			// Get the current page
+			$paged = get_query_var('paged') ? get_query_var('paged') : 1;
+
 			$args = array(
 				'post_type' => 'post',
-				'posts_per_page' => 6,
+				'posts_per_page' => 12,
+				'paged' => $paged, // Include the paged parameter for pagination
 			);
 
-			$blogs = new wp_query($args);
+			$blogs = new WP_Query($args);
 
 			if ($blogs->have_posts()) :
 				while ($blogs->have_posts()) : $blogs->the_post();
@@ -24,12 +28,12 @@
 			?>
 			<div class="col-md-6 col-lg-4 col-12">
 				<div class="single-blog">
-					<a href="<?php the_permalink() ?>">
+					<a href="<?php the_permalink(); ?>">
 						<img src="<?php echo esc_html($thumbnail_url); ?>" class="img-fluid" alt="">
 					</a>
 
 					<div class="text">
-						<a href="<?php the_permalink() ?>">
+						<a href="<?php the_permalink(); ?>">
 							<h3>
 								<?php the_title(); ?>
 							</h3>
@@ -44,10 +48,24 @@
 			<?php
 				endwhile;
 				wp_reset_postdata();
+			else:
+			?>
+				<p>لا توجد مقالات حاليًا.</p>
+			<?php
 			endif;
+			?>
+		</div>
 
-			previous_posts_link('السابق');
-			next_posts_link('التالي');
+		<div class="pagination">
+			<?php
+			// Display pagination
+			echo paginate_links(array(
+				'total' => $blogs->max_num_pages,
+				'current' => $paged,
+				'format' => '?paged=%#%',
+				'prev_text' => __('السابق'),
+				'next_text' => __('التالي'),
+			));
 			?>
 		</div>
 	</div>

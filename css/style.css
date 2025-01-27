@@ -622,3 +622,70 @@ footer p {
     margin-bottom: 30px;
   }
 }/*# sourceMappingURL=style.css.map */
+
+.pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	/* Spacing between page links */
+	margin: 20px 0;
+	/* Space above and below pagination */
+	font-family: Arial, sans-serif;
+	/* Font styling */
+}
+
+.pagination .page-numbers {
+	display: inline-block;
+	padding: 8px 12px;
+	border: 1px solid #ddd;
+	/* Border for buttons */
+	border-radius: 5px;
+	/* Rounded corners */
+	color: #333;
+	/* Default text color */
+	text-decoration: none;
+	/* Remove underline */
+	background-color: #fff;
+	/* Background color */
+	transition: all 0.3s ease;
+	/* Smooth hover effect */
+}
+
+.pagination .page-numbers:hover {
+	border-color: #39957a;
+	/* Highlight border */
+	color: #fff;
+	/* Text color on hover */
+	background-color: #39957a;
+	/* Background color on hover */
+}
+
+.pagination .page-numbers.current {
+	font-weight: bold;
+	color: #fff;
+	background-color: #39957a;
+	/* Active page background */
+	border-color: #39957a;
+}
+
+.pagination .next,
+.pagination .prev {
+	font-weight: bold;
+}
+
+.pagination .next.page-numbers,
+.pagination .prev.page-numbers {
+	color: #333;
+	padding: 8px 12px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	text-decoration: none;
+}
+
+.pagination .next.page-numbers:hover,
+.pagination .prev.page-numbers:hover {
+	background-color: #39957a;
+	color: #fff;
+	border-color: #39957a;
+}
