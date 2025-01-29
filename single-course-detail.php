@@ -9,20 +9,7 @@ get_header();
 // get subjects and lectures
 $lectures = get_field('lectures');
 
-$lecture1 = $lectures['lecture1'];
-$lecture2 = $lectures['lecture2'];
-$lecture3 = $lectures['lecture3'];
-$lecture4 = $lectures['lecture4'];
-$lecture5 = $lectures['lecture5'];
-
-
 $subjects = get_field('Subjects');
-
-$subject1 = $subjects['lecture1'];
-$subject2 = $subjects['lecture2'];
-$subject3 = $subjects['lecture3'];
-$subject4 = $subjects['lecture4'];
-$subject5 = $subjects['lecture5'];
 
 $hint = get_field('hint');
 $announce = get_field('announce');
@@ -102,9 +89,8 @@ section.testimonials.subjects {
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<div>
-   			        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/waratel.jpeg'); ?>" class="img-fluid" style="width: 325px;" alt="<?php echo esc_attr(get_the_title()); ?>">
-                </div>
+				<img src="<?php echo esc_url(get_template_directory_uri() . '/images/waratel.jpeg'); ?>" class="img-fluid"
+					style="width: 325px;" alt="<?php echo esc_attr(get_the_title()); ?>">
 			</div>
 
 			<div class="col-md-6">
@@ -112,10 +98,44 @@ section.testimonials.subjects {
 				$link = get_field('video_link');
 				if ($link): ?>
 				<div class="about-video">
-					<iframe width="100%" height="315" src="<?php echo esc_url($link); ?>" title="YouTube video player"
+					<?php
+                    function get_embedded_youtube_url($url) {
+                        $parsed_url = parse_url($url);
+                        
+                        // Handle shortened youtu.be links
+                        if ($parsed_url['host'] === 'youtu.be') {
+                            $video_id = trim($parsed_url['path'], '/');
+                            return 'https://www.youtube.com/embed/' . $video_id;
+                        }
+                    
+                        // Handle standard YouTube URLs (watch?v=VIDEO_ID)
+                        if (isset($parsed_url['query'])) {
+                            parse_str($parsed_url['query'], $query_params);
+                            if (isset($query_params['v'])) {
+                                return 'https://www.youtube.com/embed/' . $query_params['v'];
+                            }
+                        }
+                    
+                        // Handle YouTube Shorts format (youtube.com/shorts/VIDEO_ID)
+                        if (strpos($parsed_url['path'], '/shorts/') === 0) {
+                            $video_id = explode('/', $parsed_url['path'])[2] ?? '';
+                            return 'https://www.youtube.com/embed/' . $video_id;
+                        }
+                    
+                        // Return unchanged if already in embed format
+                        return $url;
+                    }
+
+                    $embed_url = get_embedded_youtube_url($link);
+                    ?>
+
+					<!-- Embed YouTube Video -->
+					<iframe width="100%" height="315" src="<?php echo esc_url($embed_url); ?>" title="YouTube video player"
 						frameborder="0"
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						allowfullscreen></iframe>
+						allowfullscreen>
+					</iframe>
+
 				</div>
 
 				<?php endif; ?>
@@ -138,14 +158,7 @@ section.testimonials.subjects {
 		</div>
 		<?php if ($lectures) : ?>
 		<div class="detail">
-			<ul>
-				<?php if ($lecture1): ?> <li><?= $lecture1; ?></li><?php endif; ?>
-				<?php if ($lecture2): ?><li><?= $lecture2; ?></li><?php endif; ?>
-				<?php if ($lecture3): ?> <li><?= $lecture3; ?></li><?php endif; ?>
-				<?php if ($lecture4): ?><li><?= $lecture4; ?></li><?php endif; ?>
-				<?php if ($lecture5): ?> <li><?= $lecture5; ?></li><?php endif; ?>
-
-			</ul>
+			<?= $lectures; ?>
 		</div>
 		<?php endif; ?>
 	</div>
@@ -158,14 +171,7 @@ section.testimonials.subjects {
 		</div>
 		<?php if ($subjects) : ?>
 		<div class="detail">
-			<ul>
-				<?php if ($subject1): ?> <li><?= $subject1; ?></li><?php endif; ?>
-				<?php if ($subject2): ?><li><?= $subject2; ?></li><?php endif; ?>
-				<?php if ($subject3): ?> <li><?= $subject3; ?></li><?php endif; ?>
-				<?php if ($subject4): ?><li><?= $subject4; ?></li><?php endif; ?>
-				<?php if ($subject5): ?> <li><?= $subject5; ?></li><?php endif; ?>
-
-			</ul>
+			<?= $subjects; ?>
 		</div>
 		<?php endif; ?>
 		<?php if ($hint) : ?>
