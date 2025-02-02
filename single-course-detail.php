@@ -83,21 +83,37 @@ section.testimonials.subjects {
 	}
 }
 
+.course-image {
+    border-radius: 15px;
+    height: 350px;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 767px) {
+    .course-image {
+        margin-bottom: 25px;
+    }
+}
 </style>
 
 <section class="about">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<img src="<?php echo esc_url(get_template_directory_uri() . '/images/waratel.jpeg'); ?>" class="img-fluid"
-					style="width: 325px;" alt="<?php echo esc_attr(get_the_title()); ?>">
+			    <div>
+				<?php
+        			if (has_post_thumbnail()) {
+        				the_post_thumbnail('full', array('class' => 'img-fluid course-image'));
+        			}
+        		?>
+			    </div>
 			</div>
 
 			<div class="col-md-6">
 				<?php
 				$link = get_field('video_link');
 				if ($link): ?>
-				<div class="about-video">
+				<div class="about-video h-100 mb-4">
 					<?php
                     function get_embedded_youtube_url($url) {
                         $parsed_url = parse_url($url);
@@ -130,7 +146,7 @@ section.testimonials.subjects {
                     ?>
 
 					<!-- Embed YouTube Video -->
-					<iframe width="100%" height="315" src="<?php echo esc_url($embed_url); ?>" title="YouTube video player"
+					<iframe width="100%" height="100%" src="<?php echo esc_url($embed_url); ?>" title="YouTube video player"
 						frameborder="0"
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 						allowfullscreen>
