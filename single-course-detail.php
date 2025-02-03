@@ -222,7 +222,7 @@ section.testimonials.subjects {
 					// $description = get_field('description_testimonials');
 					$post_id =  get_field('page_link', false, false);
 
-					$student_name = get_field('student_description');
+					$student_name = get_field('student_name');
 					$student_description = get_field('student_description');
 					$student_rating = get_field('student_rating');
 
