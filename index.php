@@ -290,7 +290,7 @@ endif;
 							<img src="<?php echo esc_url(get_template_directory_uri() . '/images/icons/rs.svg'); ?>" alt="">
 						</p>
 
-						<p class="text-center">شهريـــا</p>
+<!-- 						<p class="text-center">شهريـــا</p> -->
 
 						<ul>
 							<li><?php echo esc_html($adv_1); ?></li>
